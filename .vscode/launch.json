@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -14,7 +11,7 @@
             "type": "java",
             "name": "Launch SelectionSortTest",
             "request": "launch",
-            "mainClass": "src.selection.test.SelectionSortTest",
+            "mainClass": "sorting_algorithms.selection.test.SelectionSortTest",
             "projectName": "SortingAlgorithms_54693700"
         }
     ]
