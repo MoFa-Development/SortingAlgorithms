@@ -1,8 +1,8 @@
-package src.selection.test;
+package sorting_algorithms.selection.test;
 
 import java.util.Arrays;
 
-import src.selection.SelectionSort;
+import sorting_algorithms.selection.SelectionSort;
 
 public class SelectionSortTest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package src.selection;
+package sorting_algorithms.selection;
 import java.util.Arrays;
 
 public class SelectionSort {
@@ -7,8 +7,8 @@ public class SelectionSort {
         throw new IllegalStateException("Utility class");
     }
 
-    public static int[] sort(int input_arr[]) {
-        int[] arr = input_arr.clone();
+    public static int[] sort(int[] inputArr) {
+        int[] arr = inputArr.clone();
         
         int anfang = 0;
         int ende = arr.length-1;
