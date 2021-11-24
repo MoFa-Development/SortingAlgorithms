@@ -2,8 +2,14 @@ package src.selection;
 import java.util.Arrays;
 
 public class SelectionSort {
-    public static void main(String args[]) {
-        int[] arr = {9,8,7,6,5,4,3,2,1};
+
+    private SelectionSort() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    public static int[] sort(int input_arr[]) {
+        int[] arr = input_arr.clone();
+        
         int anfang = 0;
         int ende = arr.length-1;
         int bestes = -1;
@@ -19,7 +25,7 @@ public class SelectionSort {
                     bestes = i;
                 }
             }
-            
+
             // Tausche besten mit Anfangselement
             int zwischenspeicher = arr[anfang];
             arr[anfang] = arr[bestes];
@@ -28,6 +34,6 @@ public class SelectionSort {
             anfang++;
         }
 
-        System.out.println(Arrays.toString(arr));
+        return arr;
     }
 }
