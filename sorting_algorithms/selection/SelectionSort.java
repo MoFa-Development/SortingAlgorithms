@@ -15,9 +15,7 @@ public class SelectionSort extends Sort {
         
         int anfang = 0;
         int ende = arr.length-1;
-        int bestes = 0;
-        
-        System.out.println(Arrays.toString(arr));
+        int bestes = -1;
 
         while(anfang != ende) {
             bestes = anfang;
