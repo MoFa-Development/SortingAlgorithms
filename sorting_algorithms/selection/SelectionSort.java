@@ -1,4 +1,5 @@
 package sorting_algorithms.selection;
+
 import java.util.Arrays;
 
 public class SelectionSort {
@@ -13,8 +14,6 @@ public class SelectionSort {
         int anfang = 0;
         int ende = arr.length-1;
         int bestes = -1;
-        
-        System.out.println(Arrays.toString(arr));
 
         while(anfang != ende)
         {
