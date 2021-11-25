@@ -1,7 +1,10 @@
 package sorting_algorithms.selection;
+
 import java.util.Arrays;
 
-public class SelectionSort {
+import sorting_algorithms.Sort;
+
+public class SelectionSort extends Sort {
 
     private SelectionSort() {
         throw new IllegalStateException("Utility class");
@@ -12,24 +15,23 @@ public class SelectionSort {
         
         int anfang = 0;
         int ende = arr.length-1;
-        int bestes = -1;
+        int bestes = 0;
         
         System.out.println(Arrays.toString(arr));
 
-        while(anfang != ende)
-        {
-            for(int i = anfang; i <= ende; i++)
-            {
-                if(bestes == -1 || arr[bestes] > arr[i])
-                {
-                    bestes = i;
+        while(anfang != ende) {
+            bestes = anfang;
+            for(int speicher = anfang; speicher <= ende; speicher++) {
+                if(arr[speicher] < arr[bestes]) {
+                    bestes = speicher;
                 }
             }
 
-            // Tausche besten mit Anfangselement
-            int zwischenspeicher = arr[anfang];
-            arr[anfang] = arr[bestes];
-            arr[bestes] = zwischenspeicher;
+            if(anfang != bestes) {
+                int temp = arr[bestes];
+                arr[bestes] = arr[anfang];
+                arr[anfang] = temp;
+            }
             
             anfang++;
         }
