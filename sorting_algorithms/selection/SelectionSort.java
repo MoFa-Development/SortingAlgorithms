@@ -2,15 +2,12 @@ package sorting_algorithms.selection;
 
 import sorting_algorithms.Sort;
 
-public class SelectionSort extends Sort {
-
-    private SelectionSort() {
-        throw new IllegalStateException("Utility class");
-    }
-
-    public static int[] sort(int[] inputArr) {
+public class SelectionSort implements Sort {
+    
+    @Override
+    public int[] sort(int[] inputArr) {
         int[] arr = inputArr.clone();
-        
+
         int anfang = 0;
         int ende = arr.length-1;
         int bestes = -1;
