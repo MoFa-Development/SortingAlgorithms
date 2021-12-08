@@ -1,24 +1,15 @@
-package sorting_algorithms.selection;
+package sorting_algorithms.insert;
 
-import java.text.CollationKey;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.Collection;
 
 import sorting_algorithms.Sort;
 
-public class InsertSort extends Sort {
+public class InsertSort implements Sort {
 
-    private InsertSort() {
-        throw new IllegalStateException("Utility class");
-    }
-
-    public static int[] sort(int[] inputArr) {
+    public int[] sort(int[] inputArr) {
         
         // Convert inputArr to List<Integer>
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
 
         // Insert integers
         for (int i = 0; i < inputArr.length; i ++) {

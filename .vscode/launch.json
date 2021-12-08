@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AllAlgorithmsTest",
+            "request": "launch",
+            "mainClass": "sorting_algorithms.test.AllAlgorithmsTest",
+            "projectName": "SortingAlgorithms_54693700"
+        },
+        {
+            "type": "java",
+            "name": "Launch InsertSortTest",
+            "request": "launch",
+            "mainClass": "sorting_algorithms.insert.InsertSortTest",
+            "projectName": "SortingAlgorithms_54693700"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
