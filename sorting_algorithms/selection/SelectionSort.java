@@ -1,7 +1,5 @@
 package sorting_algorithms.selection;
 
-import java.util.Arrays;
-
 import sorting_algorithms.Sort;
 
 public class SelectionSort extends Sort {
