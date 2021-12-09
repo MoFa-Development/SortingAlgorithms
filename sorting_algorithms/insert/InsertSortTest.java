@@ -8,17 +8,21 @@ public class InsertSortTest {
     public static void main(String[] args) {
         System.out.println("\n### INSERT SORT TEST ###");
 
-        SortTest sortTest;
+        SortTest sortTest = null;
         
-        int [] intArr = Stream.of(args)
-                    .mapToInt(Integer::parseInt)
-                    .toArray();
+        if (args.length > 0) {
+            int [] intArr = Stream.of(args)
+                        .mapToInt(Integer::parseInt)
+                        .toArray();
 
-        if(intArr.length > 0)
-            sortTest = new SortTest(InsertSort.class, intArr);
-        else
+            
+            if(intArr.length > 0) {
+                sortTest = new SortTest(InsertSort.class, intArr);
+            }
+        } else {
             sortTest = new SortTest(InsertSort.class);
-        
+        }
+
         sortTest.defaultTest();
     }
 }

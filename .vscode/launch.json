@@ -6,21 +6,21 @@
             "name": "Launch InsertSortTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.insert.InsertSortTest",
-            "projectName": "SortingAlgorithms_89f39ce9"
+            "args": "${input:inputArgs}"
         },
         {
             "type": "java",
             "name": "Launch AllAlgorithmsTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.test.AllAlgorithmsTest",
-            "projectName": "SortingAlgorithms_54693700"
+            "args": "${input:inputArgs}"
         },
         {
             "type": "java",
             "name": "Launch InsertSortTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.insert.InsertSortTest",
-            "projectName": "SortingAlgorithms_54693700"
+            "args": "${input:inputArgs}"
         },
         {
             "type": "java",
@@ -34,7 +34,7 @@
             "name": "Launch SelectionSortTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.selection.test.SelectionSortTest",
-            "projectName": "SortingAlgorithms_54693700"
+            "args": "${input:inputArgs}"
         }
     ],
     "inputs": [
