@@ -1,11 +1,18 @@
 package sorting_algorithms.test;
 
-import sorting_algorithms.insert.InsertSortTest;
-import sorting_algorithms.selection.SelectionSortTest;
+import sorting_algorithms.insert.InsertSort;
+import sorting_algorithms.selection.SelectionSort;
 
 public class AllAlgorithmsTest {
     public static void main(String[] args) {
-        InsertSortTest.main(args);
-        SelectionSortTest.main(args);
+        int[] testArr = SortTest.createRandomTestArr(1000, 0, 1337);
+        SortTest insert = new SortTest(InsertSort.class, testArr);
+        SortTest selection = new SortTest(SelectionSort.class, testArr);
+
+        System.out.println("### INSERT SORT ###");
+        insert.defaultTest();
+
+        System.out.println("### SELECTION SORT ###");
+        selection.defaultTest();
     }
 }

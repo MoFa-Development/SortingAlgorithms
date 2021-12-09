@@ -3,8 +3,17 @@ package sorting_algorithms.insert;
 import java.util.ArrayList;
 
 import sorting_algorithms.Sort;
+import sorting_algorithms.test.SortTest;
 
-public class InsertSort implements Sort {
+public class InsertSort extends Sort {
+
+    public InsertSort() {
+        super();
+    }
+
+    public InsertSort(SortTest callbackSortTest) {
+        super(callbackSortTest);
+    }
 
     public int[] sort(int[] inputArr) {
         

@@ -1,9 +1,18 @@
 package sorting_algorithms.selection;
 
 import sorting_algorithms.Sort;
+import sorting_algorithms.test.SortTest;
 
-public class SelectionSort implements Sort {
-    
+public class SelectionSort extends Sort {
+
+    public SelectionSort() {
+        super();
+    }
+
+    public SelectionSort(SortTest callbackSortTest) {
+        super(callbackSortTest);
+    }
+
     @Override
     public int[] sort(int[] inputArr) {
         int[] arr = inputArr.clone();
