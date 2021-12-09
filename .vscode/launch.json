@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch InsertSortTest",
+            "request": "launch",
+            "mainClass": "sorting_algorithms.insert.InsertSortTest",
+            "projectName": "SortingAlgorithms_89f39ce9"
+        },
+        {
+            "type": "java",
             "name": "Launch AllAlgorithmsTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.test.AllAlgorithmsTest",
@@ -19,7 +26,8 @@
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "${file}",
+            "args": "${input:inputArgs}"
         },
         {
             "type": "java",
@@ -27,6 +35,13 @@
             "request": "launch",
             "mainClass": "sorting_algorithms.selection.test.SelectionSortTest",
             "projectName": "SortingAlgorithms_54693700"
+        }
+    ],
+    "inputs": [
+        {
+          "id": "inputArgs",
+          "type": "promptString",
+          "description": "Commandline Arguments"
         }
     ]
 }
