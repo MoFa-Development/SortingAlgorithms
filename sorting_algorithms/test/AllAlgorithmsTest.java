@@ -9,10 +9,10 @@ public class AllAlgorithmsTest {
         SortTest insert = new SortTest(InsertSort.class, testArr);
         SortTest selection = new SortTest(SelectionSort.class, testArr);
 
-        System.out.println("### INSERT SORT ###");
+        System.out.println("\n### INSERT SORT ###");
         insert.defaultTest();
 
-        System.out.println("### SELECTION SORT ###");
+        System.out.println("\n### SELECTION SORT ###");
         selection.defaultTest();
     }
 }

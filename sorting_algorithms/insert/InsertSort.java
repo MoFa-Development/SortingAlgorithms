@@ -15,6 +15,11 @@ public class InsertSort extends Sort {
         super(callbackSortTest);
     }
 
+    @Override
+    public boolean givesReports() {
+        return true;
+    }
+
     public int[] sort(int[] inputArr) {
         
         // Convert inputArr to List<Integer>
@@ -24,13 +29,19 @@ public class InsertSort extends Sort {
         for (int input: inputArr) {
             int k;
             for (k= 0; k < list.size(); k++) {
+                reportCompare();
+                reportRead();
                 if (list.get(k) > input) {
                     list.add(k, input);
+                    reportWrite();
                     break;
                 }
             }
+
+            reportCompare();
             if (k == list.size()) {
                 list.add(input);
+                reportWrite();
             }
         }
 

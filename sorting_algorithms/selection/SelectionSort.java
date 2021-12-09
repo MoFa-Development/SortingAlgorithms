@@ -14,6 +14,11 @@ public class SelectionSort extends Sort {
     }
 
     @Override
+    public boolean givesReports() {
+        return true;
+    }
+
+    @Override
     public int[] sort(int[] inputArr) {
         int[] arr = inputArr.clone();
 
@@ -22,14 +27,21 @@ public class SelectionSort extends Sort {
         int bestes = -1;
 
         while(anfang != ende) {
+            reportCompare();
+
             bestes = anfang;
+
             for(int speicher = anfang; speicher <= ende; speicher++) {
+                reportCompare();
+                reportRead();
+                reportRead();
                 if(arr[speicher] < arr[bestes]) {
                     bestes = speicher;
                 }
             }
 
             if(anfang != bestes) {
+                reportSwap();
                 int temp = arr[bestes];
                 arr[bestes] = arr[anfang];
                 arr[anfang] = temp;
