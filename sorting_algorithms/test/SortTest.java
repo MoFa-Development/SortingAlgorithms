@@ -1,6 +1,7 @@
 package sorting_algorithms.test;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.Random;
 
 import sorting_algorithms.Sort;
@@ -46,6 +47,25 @@ public class SortTest {
 
         for(int i = 0; i < length; i++) {
             testArr[i] = new Random().nextInt(max-min)+min;
+        }
+
+        return testArr;
+    }
+
+    /**
+     * @param length length of the output array
+     * @param min minimum of range the values are in
+     * @param max maximum of range the values are in
+     * @param seed seed for random class
+     * @return randomly generated array accorting to given parameters
+     */
+    public static int[] createRandomTestArr(int length, int min, int max, long seed) {
+        Random rand = new Random(seed);
+        
+        int[] testArr = new int[length];
+
+        for(int i = 0; i < length; i++) {
+            testArr[i] = rand.nextInt(max-min)+min;
         }
 
         return testArr;
