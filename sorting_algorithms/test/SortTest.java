@@ -28,6 +28,24 @@ public class SortTest {
     }
 
     /**
+     * @param nanoTime time in nanoseconds
+     */
+    private String nanoTimeInSensibleUnit(long nanoTime) {
+        // if(nanoTime >= 60 * 1_000_000_000) {
+        //     double minTime = (int) (nanoTime) / (60* 1_000_000_000);
+        //     return Double.toString(minTime) + " minutes";
+        // } else if(nanoTime >= 1_000_000_000) {
+        //     double secTime = (int) (nanoTime) / (1_000_000_000);
+        //     return Double.toString(secTime) + " seconds";
+        // } else if(nanoTime >= 1_000_000) {
+        //     double milliTime = (int) (nanoTime) / 1_000_000;
+        //     return Double.toString(milliTime) + " milliseconds";
+        // } else { 
+            return nanoTime + " nanoseconds";
+        //}
+    }
+
+    /**
      * @param algorithmClass class reference to algorithm class to use
      * @param arr array to use for testing
      */
@@ -114,8 +132,8 @@ public class SortTest {
         long averageRuntime = testAverageRuntime(testArr, sampleAmount);
     
         System.out.print("Average Runtime: ");
-        System.out.print(averageRuntime);
-        System.out.print(" nanoseconds (for ");
+        System.out.print(nanoTimeInSensibleUnit(averageRuntime));
+        System.out.print(" (for ");
         System.out.print(sampleAmount);
         System.out.println(" samples)");
     }
