@@ -98,12 +98,12 @@ public class SortTest {
      * Default testing procedure for every algorithm
      */
     public void defaultTest() {
-        int[] sortResult = algorithm.sort(testArr);
-        System.out.print("Input: ");
-        System.out.println(Arrays.toString(testArr));
-        System.out.print("Output: ");
-        System.out.println(Arrays.toString(sortResult));
-        System.out.println("----");
+        // int[] sortResult = algorithm.sort(testArr);
+        // System.out.print("Input: ");
+        // System.out.println(Arrays.toString(testArr));
+        // System.out.print("Output: ");
+        // System.out.println(Arrays.toString(sortResult));
+        // System.out.println("----");
         System.out.print("Length of array: ");
         System.out.println(testArr.length);
         printAverageRuntime();

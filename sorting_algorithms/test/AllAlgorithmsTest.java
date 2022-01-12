@@ -6,7 +6,7 @@ import sorting_algorithms.quick.QuickSort;
 
 public class AllAlgorithmsTest {
 
-    static final int TEST_ARR_LEN = 10_000;
+    static final int TEST_ARR_LEN = 1000;
     static final int TEST_ARR_VAL_MIN = 0;
     static final int TEST_ARR_VAL_MAX = 1337;
 
