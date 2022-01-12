@@ -100,7 +100,7 @@ public class SortTest {
     public void defaultTest() {
         if(testArr.length < MAX_TEST_ARR_LENGTH_TO_PRINT) {
             int[] sortResult = algorithm.sort(testArr);
-            System.out.print("Input: ");
+            System.out.print("Input:  ");
             System.out.println(Arrays.toString(testArr));
             System.out.print("Output: ");
             System.out.println(Arrays.toString(sortResult));
@@ -111,7 +111,6 @@ public class SortTest {
         printAverageRuntime();
         printOperations();
     }
-
 
     /**
      * @param arr array to sort
@@ -145,7 +144,6 @@ public class SortTest {
         System.out.println(" executions)");
     }
     
-
     /**
      * @param arr array to sort
      * @return runtime needed to sort `arr`
