@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch QuickSortTest",
+            "request": "launch",
+            "mainClass": "sorting_algorithms.quick.QuickSortTest",
+            "projectName": "SortingAlgorithms_89f39ce9"
+        },
+        {
+            "type": "java",
             "name": "Launch InsertSortTest",
             "request": "launch",
             "mainClass": "sorting_algorithms.insert.InsertSortTest",
