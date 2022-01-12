@@ -28,21 +28,26 @@ public class SortTest {
     }
 
     /**
-     * @param nanoTime time in nanoseconds
+     * @param micros time in microseconds
+     * @return human readable string
      */
-    private String nanoTimeInSensibleUnit(long nanoTime) {
-        // if(nanoTime >= 60 * 1_000_000_000) {
-        //     double minTime = (int) (nanoTime) / (60* 1_000_000_000);
-        //     return Double.toString(minTime) + " minutes";
-        // } else if(nanoTime >= 1_000_000_000) {
-        //     double secTime = (int) (nanoTime) / (1_000_000_000);
-        //     return Double.toString(secTime) + " seconds";
-        // } else if(nanoTime >= 1_000_000) {
-        //     double milliTime = (int) (nanoTime) / 1_000_000;
-        //     return Double.toString(milliTime) + " milliseconds";
-        // } else { 
-            return nanoTime + " nanoseconds";
-        //}
+
+    private String getReadableTime(long nanos) {
+
+        double micros = nanos / 1_000;
+        double millis = micros / 1_000;
+        double secs = millis / 1_000;
+        double mins = secs / 60;
+
+        if(mins > 1) {
+            return mins + " minutes";
+        } else if(secs > 1) {
+            return secs + " seconds";
+        } else if(millis > 1) {
+            return millis + " milliseconds";
+        } else {
+            return micros + " microseconds";
+        }
     }
 
     /**
@@ -132,7 +137,7 @@ public class SortTest {
         long averageRuntime = testAverageRuntime(testArr, sampleAmount);
     
         System.out.print("Average Runtime: ");
-        System.out.print(nanoTimeInSensibleUnit(averageRuntime));
+        System.out.print(getReadableTime(averageRuntime));
         System.out.print(" (for ");
         System.out.print(sampleAmount);
         System.out.println(" samples)");
@@ -155,8 +160,10 @@ public class SortTest {
      * Prints result of `testRuntime`
      */
     public void printRuntime() {
+        long runtime = testRuntime(testArr);
+        
         System.out.print("Runtime: ");
-        System.out.println(testRuntime(testArr));
+        System.out.print(getReadableTime(runtime));
     }
 
     /**
