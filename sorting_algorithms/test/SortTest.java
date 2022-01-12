@@ -1,11 +1,14 @@
 package sorting_algorithms.test;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.Random;
 
 import sorting_algorithms.Sort;
 
 public class SortTest {
+
+    private static final int MAX_TEST_ARR_LENGTH_TO_PRINT = 30;
 
     private Sort algorithm;
     private int[] testArr = {1, 3, 3, 7, 4, 2, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1};
@@ -30,9 +33,7 @@ public class SortTest {
      * @param micros time in microseconds
      * @return human readable string
      */
-
     private String getReadableTime(long nanos) {
-
         double micros = nanos / 1_000;
         double millis = micros / 1_000;
         double secs = millis / 1_000;
@@ -87,7 +88,7 @@ public class SortTest {
         int[] testArr = new int[length];
 
         for(int i = 0; i < length; i++) {
-            testArr[i] = rand.nextInt(max-min)+min;
+            testArr[i] = rand.nextInt(max+1-min)+min;
         }
 
         return testArr;
@@ -97,12 +98,14 @@ public class SortTest {
      * Default testing procedure for every algorithm
      */
     public void defaultTest() {
-        // int[] sortResult = algorithm.sort(testArr);
-        // System.out.print("Input: ");
-        // System.out.println(Arrays.toString(testArr));
-        // System.out.print("Output: ");
-        // System.out.println(Arrays.toString(sortResult));
-        // System.out.println("----");
+        if(testArr.length < MAX_TEST_ARR_LENGTH_TO_PRINT) {
+            int[] sortResult = algorithm.sort(testArr);
+            System.out.print("Input: ");
+            System.out.println(Arrays.toString(testArr));
+            System.out.print("Output: ");
+            System.out.println(Arrays.toString(sortResult));
+            System.out.println("----");
+        }
         System.out.print("Length of array: ");
         System.out.println(testArr.length);
         printAverageRuntime();
@@ -112,14 +115,14 @@ public class SortTest {
 
     /**
      * @param arr array to sort
-     * @param sampleAmount amount of iterations of runtime test
+     * @param executionAmount amount of iterations for runtime test
      * @return average of runtime needed to sort `arr` 
      */
-    public long testAverageRuntime(int[] arr, int sampleAmount) {
+    public long testAverageRuntime(int[] arr, int executionAmount) {
         long averageRuntime = testRuntime(arr);
         long runtime = 0;
 
-        for(int i = 1; i < sampleAmount; i++) {
+        for(int i = 1; i < executionAmount; i++) {
             runtime = testRuntime(arr);
             averageRuntime = (averageRuntime * (i-1) + runtime) / i;
         }
@@ -131,15 +134,15 @@ public class SortTest {
      * Print result of `testAverageRuntime`
      */
     public void printAverageRuntime() {
-        int sampleAmount = 100;
+        int executionAmount = 100;
         
-        long averageRuntime = testAverageRuntime(testArr, sampleAmount);
+        long averageRuntime = testAverageRuntime(testArr, executionAmount);
     
         System.out.print("Average Runtime: ");
         System.out.print(getReadableTime(averageRuntime));
         System.out.print(" (for ");
-        System.out.print(sampleAmount);
-        System.out.println(" samples)");
+        System.out.print(executionAmount);
+        System.out.println(" executions)");
     }
     
 

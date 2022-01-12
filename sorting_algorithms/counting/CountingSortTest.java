@@ -6,7 +6,7 @@ import sorting_algorithms.test.SortTest;
 
 public class CountingSortTest {
     public static void main(String[] args) {
-        System.out.println("\n### INSERT SORT TEST ###");
+        System.out.println("\n### COUNTING SORT TEST ###");
 
         SortTest sortTest = null;
         
