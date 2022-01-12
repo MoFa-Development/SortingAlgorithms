@@ -1,7 +1,6 @@
 package sorting_algorithms.test;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 import java.util.Random;
 
 import sorting_algorithms.Sort;
