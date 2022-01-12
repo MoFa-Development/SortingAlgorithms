@@ -34,7 +34,7 @@ public class QuickSort extends Sort {
         int[] outputArr = new int[outputArrList.size()];
 
         for (int i = 0; i < outputArr.length; i++) {
-            outputArr[i] = inputArrList.get(i);
+            outputArr[i] = outputArrList.get(i);
         }
 
         return outputArr;
@@ -52,7 +52,7 @@ public class QuickSort extends Sort {
         ArrayList<Integer> biggerList = new ArrayList<>();
 
         for(int i = 1; i < inputList.size(); i++) {
-            int number = inputList.get(i);;
+            int number = inputList.get(i);
             reportRead();
 
             reportCompare();
@@ -66,6 +66,14 @@ public class QuickSort extends Sort {
 
         smallerList = this.sort(smallerList);
         biggerList = this.sort(biggerList);
+
+
+        // System.out.print("input: ");
+        // System.out.println(inputList.toString());
+        // System.out.print("smaller: ");
+        // System.out.println(smallerList.toString());
+        // System.out.print("bigger: ");
+        // System.out.println(biggerList.toString());
 
         //! SMALLER LIST IS NOT ONLY SMALLER AFTER THIS
         ArrayList<Integer> outputList = smallerList;
